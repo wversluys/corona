@@ -1,0 +1,60 @@
+settings =
+{
+    plugins =
+    {
+        ["facebook"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { iphone=true, ["iphone-sim"]=true },
+        },
+    },
+    orientation =
+    {
+    	default = "landscapeRight",
+        supported =
+        {
+                "landscapeRight", "landscapeLeft"
+        }
+    },
+    iphone =
+    {
+            plist =
+            {
+                    UIBackgroundModes = {"audio"},
+                    UIAppFonts =
+                    {
+                        "CentraleSansBold.ttf",
+                        "CentraleSansBook.ttf",
+                        "CentraleSansCndBook.ttf",
+                        "CentraleSansXBold.ttf",
+                        "CentraleSans-Light.ttf"
+                    },
+                    CFBundleIconFile = "Icon.png",
+                    CFBundleIconFiles = {
+                            "Icon.png" ,
+                            "Icon@2x.png" ,
+                            "Icon-72.png" ,
+                            "Icon-512.png",
+                            "Icon-60.png",
+                            "Icon-60@2x.png",
+                            "Icon-76.png",
+                            "Icon-76@2x.png",
+                            "Icon-120.png"
+                    },
+                    FacebookAppID = "642555782506721",  --replace XXXXXXXXXX with your Facebook App ID
+                    CFBundleURLTypes = {
+                        {
+                            CFBundleURLSchemes = { 
+                                "fb642555782506721" 
+                            }  --replace XXXXXXXXXX with your Facebook App ID
+                        }
+                    },    
+                    
+                    -- set true to quit app on suspend
+                    UIApplicationExitsOnSuspend = false,
+
+                    -- set to false for "shine" overlay
+                    UIPrerenderedIcon = true
+            }
+    }
+}
